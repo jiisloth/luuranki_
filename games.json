@@ -1,0 +1,83 @@
+{
+    "current": {
+        "name": "Pikmin",
+        "handles": [
+            "pikmin"
+        ],
+        "votes": []
+    },
+    "derust": [
+        {
+            "name": "Mick & Mack as the Global Gladiators",
+            "handles": [
+                "mick & mack as the global gladiators",
+                "mick & mack",
+                "global gladiators",
+                "mick n mack",
+                "mmatgg"
+            ],
+            "votes": []
+        },
+        {
+            "name": "Antichamber",
+            "handles": [
+                "antichamber",
+                "ac"
+            ],
+            "votes": []
+        },
+        {
+            "name": "The Lost Vikings",
+            "handles": [
+                "the lost vikings",
+                "lost vikings",
+                "lv"
+            ],
+            "votes": []
+        },
+        {
+            "name": "The Lion King",
+            "handles": [
+                "the lion king",
+                "lion king",
+                "lk"
+            ],
+            "votes": []
+        },
+        {
+            "name": "The Messenger",
+            "handles": [
+                "the messenger",
+                "messenger",
+                "mese"
+            ],
+            "votes": []
+        }
+    ],
+    "upkeep": [
+        {
+            "name": "Dead Cells",
+            "handles": [
+                "dead cells",
+                "dc"
+            ],
+            "votes": []
+        },
+        {
+            "name": "Bubble Bobble",
+            "handles": [
+                "bubble bobble",
+                "bb"
+            ],
+            "votes": []
+        },
+        {
+            "name": "Katana ZERO",
+            "handles": [
+                "katana zero",
+                "kz"
+            ],
+            "votes": []
+        }
+    ]
+}
