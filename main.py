@@ -2,6 +2,9 @@ import os
 import json
 from twitchio.ext import commands
 import random
+from dotenv import load_dotenv
+
+load_dotenv()
 
 env = os.environ
 path = env['DATAPATH']
