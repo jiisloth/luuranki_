@@ -104,18 +104,24 @@ async def c_commands(ctx):
 async def c_commands(ctx):
     params = ctx.content.split(" ")
     if len(params) == 1:
-        await ctx.send('You can vote for next game to DERUST or UPKEEP. DERUSTing is a long process so the vote can go on for multiple weeks. UPKEEP is 1-N no reset runs depending on the game. Use "!vote derust" or "!vote upkeep" for more info!')
+        await ctx.send('Vote for next game to be practiced / played. Categories are DERUST and UPKEEP. Usage: "!vote <category> <game>"')
+        await ctx.send('DERUST is normally done on Tuesdays, but it is a longer process and voting can go on for multiple weeks. Get info with "!vote derust"')
+        await ctx.send('UPKEEP happens on Thursdays and is basically just me running the game 1-N times without reseting. Get info with "!vote upkeep"')
     if len(params) == 2:
         data = read_json("games.json")
         if params[1].lower() == "derust":
             current = data["current"]["name"]
             gamelist = count_votes(data["derust"])
-            await ctx.send('Currently derusting: {}! Use "!vote derust <game>" to vote for next game to be practiced. Current standings: {}'.format(current, ", ".join(gamelist)))
+            await ctx.send('Currently derusting: {}! Use "!vote derust <game>" to vote for next game to be practiced.'.format(current))
+            await ctx.send('Games / Votes%: {}'.format(", ".join(gamelist)))
         elif params[1].lower() == "upkeep":
             gamelist = count_votes(data["upkeep"])
-            await ctx.send('Use "!vote upkeep <game>" to vote for the next noreset run. Current standings: {}'.format(", ".join(gamelist)))
+            await ctx.send('Use "!vote upkeep <game>" to vote for the next noreset run.')
+            await ctx.send('Games / Votes%: {}'.format(", ".join(gamelist)))
         else:
-            await ctx.send('You can vote for next game to DERUST or UPKEEP. DERUSTing is a long process so the vote can go on for multiple weeks. UPKEEP is 1-N no reset runs depending on the game. Use "!vote derust" or "!vote upkeep" for more info!')
+            await ctx.send('Vote for next game to be practiced / played. Categories are DERUST and UPKEEP. Usage: "!vote <category> <game>"')
+            await ctx.send('DERUST is normally done on Tuesdays, but it is a longer process and voting can go on for multiple weeks. Get info with "!vote derust"')
+            await ctx.send('UPKEEP happens on Thursdays and is basically just me running the game 1-N times without reseting. Get info with "!vote upkeep"')
     if len(params) > 2:
         data = read_json("games.json")
         if params[1].lower() == "derust" or params[1].lower() == "upkeep":
@@ -127,8 +133,9 @@ async def c_commands(ctx):
             else:
                 await ctx.send("{} not found in games".format(" ".join(params[2:])))
         else:
-            await ctx.send('You can vote for next game to DERUST or UPKEEP. DERUSTing is a long process so the vote can go on for multiple weeks. UPKEEP is 1-N no reset runs depending on the game. Use "!vote derust" or "!vote upkeep" for more info!')
-
+            await ctx.send('Vote for next game to be practiced / played. Categories are DERUST and UPKEEP. Usage: "!vote <category> <game>"')
+            await ctx.send('DERUST is normally done on Tuesdays, but it is a longer process and voting can go on for multiple weeks. Get info with "!vote derust"')
+            await ctx.send('UPKEEP happens on Thursdays and is basically just me running the game 1-N times without reseting. Get info with "!vote upkeep"')
 
 @bot.command(name='set')
 async def c_set(ctx):
